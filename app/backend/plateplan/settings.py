@@ -14,6 +14,8 @@ import os
 # from .secret import secretKey
 # secretKey = secretKey
 
+#test
+
 secretKey = os.getenv("SECRET_KEY")
 
 DB_NAME = os.getenv("DB_NAME")
