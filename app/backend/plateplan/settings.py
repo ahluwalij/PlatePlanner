@@ -12,10 +12,10 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 from pathlib import Path
 import os
-from .secret import secretKey
-secretKey = secretKey
+# from .secret import secretKey
+# secretKey = secretKey
 
-# secretKey = os.getenv("SECRET_KEY")
+secretKey = os.getenv("SECRET_KEY")
 
 DB_NAME = os.getenv("DB_NAME")
 DB_USER = os.getenv("DB_USER")
