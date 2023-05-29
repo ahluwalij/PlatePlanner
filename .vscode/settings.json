@@ -1,0 +1,17 @@
+{
+    "team.showWelcomeMessage": false,
+    "python.pipenvPath": "${workspaceFolder}/backend/env/bin/python3.8",
+    "python.linting.pycodestyleArgs": [
+        "--ignore=E501"
+    ],
+    "git.ignoreLimitWarning": true,
+    "maven.view": "flat",
+    /*"editor.formatOnSave": true,
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.pylintPath": "/path/to/pylint",
+    "python.linting.pylintArgs": [
+        "--load-plugins",
+        "pylint_django"
+    ],
+    "python.linting.pylintEnabled": true */
+}

@@ -1,0 +1,159 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/InterVariableFont.woff2') format('woff2-variations'); /* Modern Browsers */
+    font-weight: 1 900;
+}
+
+
+@font-face {
+    font-family: 'Camphor';
+
+    src: url('../fonts/Camphor300.woff2') format('woff2'); /* Modern Browsers */
+
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Camphor';
+
+    src: url('../fonts/Camphor400.woff2') format('woff2'); /* Modern Browsers */
+
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Camphor';
+
+    src: url('../fonts/Camphor500.woff2') format('woff2'); /* Modern Browsers */
+
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Camphor';
+
+    src: url('../fonts/Camphor600.woff2') format('woff2'); /* Modern Browsers */
+
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Camphor';
+
+    src: url('../fonts/camphorHeavy.woff') format('woff'); /* Modern Browsers */
+
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alliance';
+
+    src: url('../fonts/AllianceNo1Light.woff2') format('woff2'); /* Modern Browsers */
+
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alliance';
+
+    src: url('../fonts/AllianceNo1Regular.woff2') format('woff2'); /* Modern Browsers */
+
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alliance';
+
+    src: url('../fonts/AllianceNo1Medium.woff2') format('woff2'); /* Modern Browsers */
+
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alliance';
+
+    src: url('../fonts/AllianceNo1SemiBold.woff2') format('woff2'); /* Modern Browsers */
+
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alliance';
+
+    src: url('../fonts/AllianceNo1Bold.woff2') format('woff2'); /* Modern Browsers */
+
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alliance';
+
+    src: url('../fonts/AllianceNo1ExtraBold.woff2') format('woff2'); /* Modern Browsers */
+
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alliance';
+
+    src: url('../fonts/AllianceNo1Black.woff2') format('woff2'); /* Modern Browsers */
+
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+
+    src: url('../fonts/OpenSans300.woff2') format('woff2'); /* Modern Browsers */
+
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+
+    src: url('../fonts/OpenSans400.woff2') format('woff2'); /* Modern Browsers */
+
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+
+    src: url('../fonts/OpenSans600.woff2') format('woff2'); /* Modern Browsers */
+
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+
+    src: url('../fonts/OpenSans700.woff2') format('woff2'); /* Modern Browsers */
+
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+
+    src: url('../fonts/OpenSans800.woff2') format('woff2'); /* Modern Browsers */
+
+    font-weight: 800;
+    font-style: normal;
+}

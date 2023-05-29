@@ -1,0 +1,1886 @@
+@import url("font.css");
+
+/* Alliance font weights: 300-900 */
+
+:root{
+    --mainTextColor: #32323c;
+    --inputBoxTextColor: #4b5257;
+}
+
+* {
+    font-family: 'Alliance', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    /* text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; */
+}
+
+/* orange: #ff8200 */
+/* green: #43b02a */
+/* gen button color: #47B57A */
+
+.hidden {
+    display: none;
+}
+
+.space2 { height: 2px; }
+.space4 { height: 4px; }
+.space6 { height: 6px; }
+.space8 { height: 8px; }
+.space12 { height: 12px; }
+.space16 { height: 16px; }
+.space20 { height: 20px; }
+.space24 { height: 24px; }
+.space32 { height: 32px; }
+.space48 { height: 48px; }
+.space64 { height: 64px; }
+
+
+/*
+=======================================================
+                        HEADER
+=======================================================
+*/
+
+
+#topLine {
+	z-index: 2;
+	width: 100%;
+    height: 4px;
+    background: #43b02a;
+}
+
+.header {
+    background-color: #fff;
+    transition: all .25s ease;
+    overflow: hidden;
+}
+
+.rowHeader {
+    height: 80px;
+    display: flex;
+}
+
+.condensedHeader {
+    display: flex;
+    flex-direction: column;
+}
+
+.condensedHeaderText {
+    height: 45px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #474c52;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.logoIconRotate {
+    transform: rotate(360deg);
+    transition: 1s ease;
+}
+
+.logoText {
+    font-size: 24px;
+    font-family: 'Alliance';
+    font-weight: 800;
+    color:#474c52;
+    padding: 0 8px 0 0;
+}
+
+.headerText{ 
+    font-size: 16px;
+    font-weight: 400;
+    color: #474c52;
+}
+
+#signInArrow{ 
+    transition: padding 0.25s;
+}
+
+/* change to header buttons only */
+button {
+    background: none;
+	color: inherit;
+    border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.headerText:hover, .condensedHeaderText:hover { 
+    color: grey; 
+}
+
+.headerText:hover #signInArrow {
+    padding: 5px;
+}
+
+.hamburgerMenu {
+    display: none;
+}
+
+.colHeaderL {
+    min-width: 180px; 
+}
+
+.colHeaderMid {
+    min-width: 250px;
+}
+
+.colHeaderR {
+    min-width: 110px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerLRSpace {
+    flex: 1 1 auto;
+}
+
+/* total of 496 */
+.headerCenterLeftSpace {
+    flex: 0 1 218px;
+}
+.headerCenterRightSpace {
+    flex: 0 1 278px;
+}
+
+.headerBorder {
+    border-top: 2px solid #f0f0f0;
+    width: 1060px;
+    margin: 0 auto;
+}
+
+.headerAccountIcon {
+    color: #474c52;
+}
+.headerAccountIcon:hover {
+    color: grey;
+}
+
+/* Condenses the width of the header border */
+@media screen and (max-width: 1060px) {
+    .headerBorder {
+        width: 100%;
+    }
+}
+
+/* Condense menu to hamburger */
+@media screen and (max-width: 650px) {
+    .rowHeader div:not(.colHeaderL):not(.hamburgerMenu):not(.logoIcon):not(.logoIconRotate) {display: none;}
+    .hamburgerMenu {
+        display: block !important;
+    }
+    .header .logoText {
+        display: block !important;
+    }
+}
+/* Guarantees header is 80px (its normal height) when the hamburger menu isnt showing */
+@media screen and (min-width: 650px) {
+    .header{
+        height: 80px !important;
+    }
+}
+
+/*
+=======================================================
+                     NEW TOP BODY
+=======================================================
+*/
+
+.topBody {
+    height: 400;
+    width: 100%;
+    background-color: #f4f6f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.topBody::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    /* tan(12*pi/180) / 2 * 100 */
+    --center: 400px;
+    --ascend: 6vw; 
+
+    height: calc(var(--center) + var(--ascend));
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% calc(var(--center) - var(--ascend)),
+        0 calc(var(--center) + var(--ascend))
+    )
+}
+
+.topBodyText {
+    padding: 80px 0 0 0;
+    color: #474c52;
+    z-index: 2;
+}
+
+.topBodyTitle {
+    padding: 0 20px;
+    font-size: 34px;
+    font-family: 'Alliance';
+    font-weight: 800;
+    text-align: left;
+}
+
+.topBodyCaption {
+    padding: 0 20px;
+    font-size: 24px;
+    font-family: 'Alliance';
+    font-weight: 400;
+    text-align: center;
+    color: #5a636d;
+}
+
+.calErrorDiv {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.calErrorAlert {
+    font-size: 15px;
+    transition: all 0.1s;
+}
+
+.calErrorAlert .ant-alert-icon{
+    /* centers it vertically better since i changed the font and the size */
+    top: 11px;
+}
+
+.inputBox {
+    background-color: #FFF;
+    position: relative;
+    z-index: 2;
+    border-radius: 2px;
+    width: 700px;
+    height: 250px;
+    box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025);
+    /* box-shadow: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3), 0 -12px 36px -8px rgba(0,0,0,.025); */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#inputBoxShake {
+    animation: shake .6s ease both;
+}
+
+@keyframes shake {
+    0%, to {
+        transform:translateX(0)
+    }
+
+    20% {
+        transform:translateX(-15px)
+    }
+
+    40% {
+        transform:translateX(15px)
+    }
+
+    60% {
+        transform:translateX(-10px)
+    }
+
+    80% {
+        transform:translateX(10px)
+    }
+}
+
+.inputMain {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.inputButtonRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* keep the button invisible until mobile, when it comes into view */
+.inputButtonRow .genButton:nth-child(2) {
+    display: none;
+}
+
+/* not the tab! */
+.inputMacroSlider {
+    display: flex;
+    flex: 1;
+    justify-content: center; 
+}
+
+.inputSettings {
+    height: 250px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputSettingsList {
+    /* needs a set width so it doesnt move around with different select options */
+    width: 228px;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--inputBoxTextColor);
+}
+
+.inputSettingsCalc {
+    border-bottom: 1px solid transparent;
+    transition: border-color .15s;
+}
+
+.inputSettingsCalcIcon {
+    color: #606060;
+    transition: color .15s;
+}
+
+.inputSettingsCalc:hover {
+    cursor: pointer;
+    color: #202020;
+    border-bottom: 1px solid var(--mainTextColor);
+}
+
+.inputSettingsCalc:hover .inputSettingsCalcIcon {
+    color: #202020;
+}
+
+.inputBorder {
+    border-left: 2px solid #f0f0f0;
+    height: 80%; 
+}
+
+/* removes the tab bar */
+.ant-tabs-nav-scroll, .ant-tabs-bar{
+    display: none;
+}
+
+/* for antd versions higher than 4.2.4 */
+/* .ant-tabs-nav {
+    display: none !important;
+} */
+
+.inputBack {
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    color: var(--inputBoxTextColor);
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.inputBack:hover {
+    color: grey;
+}
+
+/* Back arrow animation */
+.inputBackText {
+    transition: margin 0.25s;
+}
+.inputBackArrow {
+    font-family: 'Inter';
+    transition: margin 0.25s;
+}
+.inputBack:hover .inputBackText {
+    margin-left: 5px;
+}
+.inputBack:hover .inputBackArrow {
+    margin-left: -5px;
+}
+
+.macroTab {
+    height: 250px;
+    position: relative;
+}
+
+@media screen and (max-width: 750px) { 
+    .topBodyTitle {
+        font-size: 30px;
+    }
+    .topBodyCaption {
+        text-align: left;
+        font-size: 22px;
+    }
+    .inputBox {
+        width: 450px;
+    }
+    .inputMain .inputMacroSlider, .inputBorder {
+        display: none;
+    }
+    .inputButtonRow .genButton:nth-child(2) {
+        display: block;
+    }
+    .inputBack {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 500px) { 
+    .inputBox {
+        height: 220px;
+        width: 345px;
+    }
+    .inputMain {
+        height: 220px;
+    }
+    .inputSettings {
+        /* to make the settings be lower than center so it's not crammed with the back button */
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 380px) { 
+    .inputBox {
+        width: 325px;
+    }
+}
+
+@media screen and (max-width: 350px) { 
+    .inputBox {
+        width: 100%;
+    }
+}
+
+
+
+/*
+=======================================================
+                 CALORIE CALC MODAL
+=======================================================
+*/
+
+.calorieCalcModal .ant-modal-body{
+    font-size: 15px;
+    line-height: 28px;
+}
+/* total row width: 552 */
+/* text: 180 */
+/* field: 372 */
+.calorieCalcRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 0 24px 0;
+}
+
+.calorieCalcFieldText {
+    color: #585858;
+    width: 180px;
+    font-weight: 400;
+}
+
+.calorieCalcField {
+    width: 174px;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.calorieCalcGoal .ant-radio-button-wrapper {
+    width: calc(372px/3);
+    text-align: center;
+    font-size: 15px;
+}
+
+.calorieCalcGender .ant-radio-button-wrapper {
+    width: calc(372px/2);
+    text-align: center;
+    font-size: 15px;
+}
+
+.calorieCalcHeight {
+    display: flex;
+}
+
+.calorieCalcFieldHeight {
+    width: 174px;
+    font-weight: 400;
+}
+/* button has width of 300px */
+.calorieCalcButtonRow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 0 0;
+}
+
+.calorieCalcApplyRow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 0;
+    transition: height .3s, opacity .3s;
+}
+
+/* hides the little arrows on the type='number' */
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* when given invalid input */
+.calorieCalcModal .inputInvalid .ant-input{
+    /* rgb(255, 77, 79) */
+    border-color: #ff4d4f;
+}
+.calorieCalcModal .inputInvalid .ant-input:focus {
+    box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);
+}
+.calorieCalcModal .inputInvalid .ant-radio-button-wrapper{
+    /* rgb(255, 77, 79) */
+    border-color: #ff4d4f;
+}
+.calorieCalcModal .inputInvalid .ant-radio-button-wrapper::before {
+    background: #ff4d4f !important;
+}
+.calorieCalcModal .inputInvalid .ant-radio-button-wrapper:focus{
+    box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);
+}
+
+#buttonShake {
+    animation: shake .6s ease both;
+}
+
+/* switch form to have the labels above the fields */
+@media screen and (max-width: 620px) {
+    .calorieCalcRow {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .calorieCalcFieldText {
+        padding: 0 0 4px 0;
+    }
+
+    .calorieCalcField {
+        width: 100%;
+    }
+
+    /* so the raido icons can expand to the entire width of the screen */
+    .calorieCalcRadioSmall {
+        width: 100%;
+    }
+    .ant-radio-group-large, .ant-radio-button-wrapper {
+        font-size: 14px;
+        padding: 0;
+    }
+
+    .calorieCalcGoal .ant-radio-button-wrapper {
+        width: calc(100%/3);
+    }
+
+    .calorieCalcGender .ant-radio-button-wrapper {
+        width: calc(100%/2);
+    }
+
+    .calorieCalcHeight {
+        width: 100%;
+    }
+
+    .calorieCalcFieldHeight {
+        width: 50%;
+    }
+}
+
+
+
+/*
+=======================================================
+                    MEAL CARDS
+=======================================================
+*/
+
+.colMealCards {
+    background-color: #f4f6f9;
+    padding: 100px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.colMealCards .mealCard{
+    margin-top: 20px;
+}
+
+.nutritionCardToggle {
+    transition: height .3s, opacity .3s;
+}
+
+.nutritionCardHeader {
+    width: 430px;
+    font-size: 19px;
+    font-weight: 400;
+    color: #3a3c3e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nutritionCardHeaderRegen {
+    font-size: 15px;
+    color: #787878;
+}
+
+.nutritionCardHeaderRegen:hover {
+    cursor: pointer;
+    color: #202020;
+}
+
+.nutritionCard {
+    width: 430px;
+    font-weight: 500;
+}
+
+.nutritionCard .ant-collapse, .nutritionCard .ant-collapse-item {
+}
+
+.nutritionCard .ant-collapse-header {
+    color: #46484a !important;
+    font-size: 15px;
+    cursor: pointer !important;
+    border-radius: 2px !important;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    padding: 0 40px 0 20px !important;
+    background-color: #f4f6f9 !important;
+}
+
+.nutritionCard .ant-collapse-content-box {
+    padding: 24px;
+    background-color: #f4f6f9;
+}
+
+.nutritionCardBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nutritionPieBody {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nutritionFacts {
+    flex-basis: 50%;
+    font-size: 15px;
+    padding: 0 24px;
+}
+
+
+.mealCard {
+    width: 430px;
+}
+
+.mealCard .ant-card-head {
+    font-family: 'Alliance';
+    font-weight: 500;
+    font-size: 15px;
+    color: #222426;
+}
+
+.mealCard .ant-card-extra {
+    font-size: 14px;
+    font-weight: 500;
+    color: #57595b;
+}
+
+.ant-card-body {
+    padding: 14px 24px;
+}
+
+.mealCardSkeletonPadding .ant-card-body {
+    padding: 30px 24px 24px 24px;
+}
+
+
+.mealCardBody {
+    font-size: 15px;
+    font-family: 'Alliance';
+    font-weight: 300;
+}
+
+/* less shadow, same hover.  This one is in use */
+.cardShadow2 {
+    box-shadow:0 5px 10px 0 rgba(50, 50, 93, .1), 0 2px 4px 0 rgba(0, 0, 0, .07);
+    transition-property: color, background-color, box-shadow, transform;
+    transition-duration: .15s;
+}
+.cardShadow2:hover{
+    transform:translateY(-2px);
+    cursor: pointer;
+}
+.cardShadow2:active, .cardShadow2:hover{
+    box-shadow:0 15px 30px -6px rgba(50, 50, 93, .25), 0 9px 18px -9px rgba(0, 0, 0, .3), 0 -6px 18px -4px rgba(0, 0, 0, .025);
+    cursor: default;
+}
+.cardShadow2:active {
+    transform: translateY(2px);
+}
+
+/* needed to fix bug with the glitchy side animation */
+.ant-card {
+    color: transparent;
+}
+
+/* fixes bug causing the meal title to spill over to the next line, on top of the servings text */
+.text-transition_inner div{
+    width: 100% !important;
+}
+
+.mealCardRow {
+    margin: -2px -12px;
+    padding: 6px 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color .2s ease;
+}
+
+.mealCardRow:hover {
+    border-color: #e0e0e0;
+}
+
+.mealCardTitleText {
+    font-size: 15px;
+    font-weight: 400;
+    padding-top: 1px;
+    color: #222426;
+    /* space for the icons */
+    margin-right: 55px;
+    text-overflow: ellipsis;
+}
+
+.mealCardServingText {
+    font-size: 15px;
+    font-weight: 400;
+    color: #8a8c8e;
+}
+
+.mealCardIcons {
+    float: right;
+    font-size: 18px;
+    color: #5e6062;
+    margin-top: -1px;
+}
+
+.regenIcon {
+    transition: opacity 0.1s;
+}
+
+.regenIcon:hover, .pinIcon:hover  {
+    color: #1e2022;
+}
+
+.heartIconOutline:hover {
+    color: rgb(224, 36, 94);
+}
+
+
+@media screen and (max-width: 750px) and (min-width: 500px) { 
+    .mealCard {
+        width: 390px;
+    }
+    .nutritionCard {
+        width: 390px;
+    }
+    .nutritionCardHeader {
+        width: 390px;
+    }
+    
+}
+
+@media screen and (max-width: 500px) { 
+    .mealCard {
+        width: 345px;
+    }
+    .nutritionCard {
+        width: 345px;
+    }
+    .nutritionCardHeader {
+        width: 345px;
+    }
+    /* so it's not crammed with the pie chart */
+    .nutritionFacts {
+        padding: 0 6px 0 24px;
+    }
+}
+
+@media screen and (max-width: 370px) { 
+    .mealCard {
+        width: 335px;
+    }
+    .nutritionCard {
+        width: 335px;
+    }
+    .nutritionCardHeader {
+        width: 335px;
+    }
+}
+
+@media screen and (max-width: 350px) { 
+    .mealCard {
+        width: 100%;
+    }
+    .nutritionCard {
+        width: 100%;
+    }
+    .nutritionCardToggle {
+        width: 100%;
+    }
+    .nutritionCardHeader {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .ant-collapse-header {
+        /* width: 100%; */
+    }
+    .ant-collapse-content-box {
+        padding: 24px 12px !important;
+    }
+    .nutritionFacts {
+        padding: 0 0px 0 24px;
+    }
+
+}
+
+
+
+
+/*
+=======================================================
+                        MEAL MODAL
+=======================================================
+*/
+
+.mealModal {
+    font-weight: 300;
+    color: #57595b;
+}
+
+.ant-modal-title {
+    text-align: center;
+    color: #282a2c;
+}
+
+.mealModalIngredients {
+    line-height: 26px;
+}
+
+/* Overriding styles for the meal instructions */
+.ant-steps-item-description{
+    line-height: 26px !important;
+}
+.ant-steps-item-description {
+    color:#57595b !important;
+    font-size: 15px !important;
+}
+.ant-steps-item-tail::after {
+    background: #e0e0e0 !important;
+}
+.ant-steps-item-icon {
+    border-color: #a8a8a8 !important;
+}
+ .ant-steps-icon {
+    color: #a8a8a8 !important;
+}
+
+.rowMM {
+    display: flex;
+    color: #57595b;
+}
+
+.colMMIcon {
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.colMMFiller {
+    flex: 1 1 auto;
+}
+
+.colMMPie {
+    width: 255px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .underline {
+    border-bottom: 2px solid rgba(24, 144, 255, 0.5);
+}
+
+@media screen and (max-width: 555px) { 
+    .rowMM {
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .colMMPie {
+        margin: 30px 0 0 0;
+    }
+    .colMMCals {
+        margin: 30px 0 0 0;
+    }
+}
+ 
+
+/*
+=======================================================
+                      BELOW CARDS
+=======================================================
+*/
+
+
+.belowCardSlant {
+    height: 280px;
+    width: 100%;
+    background-color: #FFF;
+    position: relative;
+}
+
+.belowCardSlant::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #F5F6F9;
+    /* tan(12*pi/180) / 2 * 100 */
+    --center: 130px;
+    --ascend: 6vw; 
+
+    height: calc(var(--center) + var(--ascend));
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% calc(var(--center) + var(--ascend)),
+        0 calc(var(--center) - var(--ascend))
+    )
+}
+
+/*
+=======================================================
+                      INFO PANEL
+=======================================================
+*/
+
+.infoPanel {
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.infoPanelSpacer {
+    height: 90px;
+}
+
+.infoSquare {
+    width: 350px;
+    padding: 0 20px;
+}
+
+.infoSquareIcon {
+    width: 45px;
+    height: 45px;
+}
+
+.infoSquareTitle {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 10px;
+    color: #323250;
+}
+
+.infoSquareText {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #525f70;
+}
+
+@media screen and (max-width: 750px) {
+    .infoPanelSpacer {
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 705px) {
+    .infoPanel {
+        flex-direction: column;
+    }
+    /* no top padding to the first square */
+    .infoPanel .infoSquare:nth-child(1) {
+        width: 100%;
+        padding: 0 20px 20px 20px;
+    }
+    .infoPanel .infoSquare:nth-child(2),
+    .infoPanel .infoSquare:nth-child(3) {
+        width: 100%;
+        padding: 20px 20px;
+    }
+}
+
+
+/*
+=======================================================
+                      SIGNUP PANEL
+=======================================================
+*/
+
+.signupPanel {
+    height: 300px;
+    background-color: #eef2f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signupPanelBody {
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.signupPanelReadyText {
+    font-size: 29px;
+    font-weight: 500;
+    color: #404143;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 430px;
+}
+
+.signupPanelInput {
+    color: #404142;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signupPanelEmail {
+    width: 220px;
+    height: 40px;
+    margin: 0 25px 0 0;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+    transition: transform .15s, box-shadow .15s, width 0s;
+    font-size: 15px;
+}
+
+.signupPanelEmail:active, .signupPanelEmail:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08) !important;
+}
+
+.signupPanelInput a:hover {
+    color: #fff;
+}
+
+.signupPanelFillerLR {
+    flex: 1 0 0;
+}
+
+.signupPanelFillerM {
+    flex: 0 1 250px;
+}
+
+@media screen and (max-width: 900px) {
+    .signupPanelBody {
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 470px;
+        /* helps vertically center it better */
+        margin: -8px 0 0 0;
+    }
+    .signupPanelReadyText {
+        min-width: 0;
+        width: 100%;
+        margin: 0;
+        align-items: flex-start;
+    }
+    .signupPanelFillerM {
+        display: none;
+    }
+    .signupPanelInput {
+        align-items: flex-start;
+        padding: 25px 0 0 0;
+    }
+    .signupPanelInputFiller {
+        max-width: 96px;
+    }
+    .signupPanelEmail {
+        width: 190px;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .signupPanelEmail {
+        width: 150px;
+    }
+
+}
+
+/*
+=======================================================
+                  MAIN TWO COLUMN BODY
+=======================================================
+*/
+
+
+#captionText{
+    font-size: 25px;
+    font-weight: 300;
+    color: var(--mainTextColor);
+}
+
+.mainBodyRow {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}
+
+.leftColumn {
+    flex: 50%;
+    padding: 15px 0 0 0;
+    text-align: right;
+}
+
+.rightColumn {
+    flex: 50%;
+    padding: 15px 0 0 90px;
+}
+
+.inputArea {
+    margin: 0 90px 0 0px;
+}
+
+/* override collape component color */
+ .ant-collapse-header {
+    background-color:#fff !important;
+    cursor: default !important;
+ }
+
+
+.inputMainBody{
+    font-size: 18px;
+    font-family: 'Alliance';
+    font-weight: 400;
+    color: var(--inputBoxTextColor);
+}
+
+/* when given invalid calorie input */
+.inputMainBody .inputInvalid {
+    /* rgb(255, 77, 79) */
+    border-color: #ff4d4f;
+}
+.inputMainBody .inputInvalid:focus {
+    box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);
+}
+
+.inputMainCalInput {
+    width: 128px;
+    font-size: 16px;
+    font-family: 'Alliance';
+    font-weight: 400;
+    color: var(--inputBoxTextColor);
+}
+
+.inputMainMealSelect {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left; 
+    width: 128px;
+    height: 36px;
+    color: var(--inputBoxTextColor);
+}
+
+.macroSliderText{
+    font-size: 15.5px;
+    font-weight: 400;
+    text-align: left; 
+    color: var(--inputBoxTextColor);
+    /* adjusts it better vertically */
+    margin: 2px 0 0 0;
+}
+
+.inputSelect {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left; 
+    color: var(--inputBoxTextColor);
+}
+
+.ant-select-selector {
+    height: 36px !important;
+}
+
+.ant-select-selection-item {
+    /* centers it vertically since i modified it*/
+    line-height: 34px !important;
+    /* display: flex !important;
+    align-items: center !important; */
+}
+
+.ant-select-item-option-content {
+    /* any bigger and it looks crowded */
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#macroSwitchText{
+    font-size: 18px;
+    font-family: 'Camphor';
+    font-weight: 300;
+    color: var(--mainTextColor);
+}
+
+.macroSwitchCollapse:hover {
+    cursor: default !important;
+}
+
+.macroText{
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--mainTextColor);
+}
+
+#macroNumbers{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.macroPin {
+    color: #606060;
+}
+
+.macroPin:hover {
+    color: #202020;
+    cursor: pointer;
+}
+
+#generateButton{
+    font-family: 'Camphor';
+    font-weight: 400;
+}
+
+.genButton {
+    white-space: nowrap;
+    display: inline-block;
+    line-height: 40px;
+    padding: 0 14px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+    background-color: #47b57a;
+    border-radius: 8px 0 8px 0;
+    font-family: 'Inter';
+    font-size: 14.25px;
+    letter-spacing: .025em;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    transition: all .15s ease;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.genButton:hover, .genButton:focus {
+    background-color: #51BC83;
+    color: #fff;
+    transform: translateY(-1px);
+    /* box-shadow: 0 13px 27px -5px rgba(50, 50, 93, .25), 0 8px 16px -8px rgba(0, 0, 0, .3), 0 -6px 16px -6px rgba(0, 0, 0, .025); */
+    box-shadow:0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08)
+}
+
+.genButton:active {
+    color: #fff;
+    background-color: #40A66E;
+    transform: translateY(1px);
+    box-shadow:0 6px 12px -2px rgba(50, 50, 93, .25), 0 3px 7px -3px rgba(0, 0, 0, .3)
+}
+
+
+/* when screen width is small enough, columns are stacked on top of each other */
+/* ----------- 0px - 937px ----------- */
+@media screen and (max-width: 937px) {
+    .mainBodyRow {
+        flex-direction: column;
+    }
+  
+    .leftColumn {
+        order: 1;
+        margin: 0 auto;
+        padding: 0;
+    }
+  
+    .rightColumn {
+        order: 2;
+        margin: 30px auto 0 auto;
+        padding: 0;
+    }
+
+    .inputArea {
+        /* centers it a little better */
+        margin: 0 45px 0 0;
+    }
+}
+
+/*
+=======================================================
+                        SIGN IN
+=======================================================
+*/
+
+.signinPage {
+    /* temp */
+    min-height: 100vh;
+    background-color: #f7fafc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.signinShake {
+    animation: shake .6s ease both;
+}
+
+.signinAlert {
+    position: absolute;
+    top: 60px;
+    transition: opacity 0.1s;
+}
+
+.ant-form, .ant-form-item {
+    all: unset;
+}
+
+
+.signinBox {
+    width: 400px;
+    padding: 50px 50px 50px 50px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025);
+    font-family: 'Camphor';
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.signinPage .logoText {
+    color: #585858;
+    -webkit-text-fill-color: #585858;
+}
+
+.signinPage .logoText:hover {
+    color: #404040;
+    -webkit-text-fill-color: #404040;
+}
+
+.signinField {
+    margin-top: 8px;
+}
+
+.signinForgot {
+    float: right;
+    color: #40a66e;
+    -webkit-text-fill-color: #40a66e;
+}
+
+.signinForgot:hover {
+    color: #404040;
+    -webkit-text-fill-color: #404040;
+}
+
+.signinTextAbove {
+    color: #585858;
+    -webkit-text-fill-color: #585858;
+}
+
+.signinTextAbove:hover {
+    color: #404040;
+    -webkit-text-fill-color: #404040;
+}
+
+.signinButton {
+    white-space: nowrap;
+    display: inline-block;
+    text-align: center;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    padding: 0 14px;
+    background-color: #47B57A;
+    border-color: #47B57A;
+    color: #fff !important;
+    -webkit-text-fill-color: #fff;
+    border-radius: 2px;
+    font-size: 16px;
+}
+
+.signinButton:hover {
+    background-color: #5DC08C;
+    border-color: #5DC08C;
+}
+
+.signinButton:active, .signinButton:focus {
+    background-color: #40A66E;
+    border-color: #40A66E;
+}
+
+.signinCheckbox:hover {
+    color: #404040;
+    -webkit-text-fill-color: #404040;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #47B57A;
+    border-color: #40A66E !important;
+}
+
+.signinBottomText {
+    color: #40a66e;
+    -webkit-text-fill-color: #40a66e;
+}
+
+.signinBottomText:hover {
+    color: #404040;
+    -webkit-text-fill-color: #404040;
+}
+
+.signinPage a {
+    transition: none;
+}
+
+.signinCopyright {
+    padding: 32px;
+    position: absolute;
+    bottom: 0px;
+    color: #505050;
+    -webkit-text-fill-color: #505050;
+}
+
+/* when alert goes to two lines */
+@media screen and (max-width: 783px) {
+    .signinAlert {
+        top: 40px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .signinBox {
+        width: 100%;
+    }
+    /* when alert goes to three lines */
+    .signinAlert {
+        top: 20px;
+    }
+}
+
+
+/*
+=======================================================
+                       SAVED MEALS
+=======================================================
+*/
+
+.avatarSaved {
+    fill: #fff !important;
+}
+
+.savedMeals .ant-pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.savedMealsBody {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 600px;
+    padding-top: 24px;
+}
+
+.ant-popover-message-title {
+    padding-top: 2px;
+}
+
+.ant-list-pagination {
+    margin-bottom: 72px;
+}
+
+
+.ant-pagination-item a{
+    /* ugly but it fixes an ant design bug causing the list numbers to be off center with my other font */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+}
+
+
+.profileRemoveMeal {
+    float: right;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.45);
+    transition: color 0s;
+}
+
+.profileRemoveMeal:hover {
+    color: #484848;
+}
+
+@media screen and (max-width: 600px) { 
+    .savedMealsBody {
+        width: 100%;
+    }
+}
+/* .savedMealsSearchBar:active, .savedMealsSearchBar:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08) !important;
+} */
+
+/*
+=======================================================
+                        PROFILE
+=======================================================
+*/
+
+.profile {
+    display: flex;
+    justify-content: center;
+    padding-top: 24px;
+}
+
+.profileBody {
+    width: 700px;
+    font-size: 18px;
+    color: #474c52;
+    margin: 0 20px;
+}
+
+.profileBody h3 {
+    color: #474c52;
+    display: inline-block;
+    border-bottom: 2px solid #474c52;
+    margin-bottom: 16px;
+}
+
+.profileGreyLinks {
+    color: #8a8c8e;
+    transition: color 0s;
+}
+
+.profileGreyLinks:hover {
+    color: #474c52;
+}
+
+.profileUserBox {
+    width: 320px;
+    height: 200px;
+}
+
+
+/*
+=======================================================
+                      ABOUT PAGE
+=======================================================
+*/
+
+.about {
+    display: flex;
+    justify-content: center;
+    padding-top: 36px;
+    color: #555759;
+}
+
+.about h2 {
+    display: inline-block;
+    color: #555759;
+    border-bottom: 2px solid #6f7073;
+}
+
+.aboutBody {
+    width: 640px;
+    font-size: 15px;
+    line-height: 28px;
+    padding: 0 20px;
+}
+
+.aboutBody p a {
+    color: #555759;
+    border-bottom: 1px solid rgba(0,0,0,0.40);
+}
+
+.aboutBody p a:hover {
+    color: #181a1c;
+    border-bottom: 1px solid rgba(0,0,0,0.70);
+}
+
+.aboutImgBody {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.aboutImgBody img {
+    width: 40%;
+    height: auto;
+    cursor: pointer;
+}
+
+.imageModal {
+    max-height: 90%;
+    overflow-x: scroll;    
+    -webkit-overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+}
+
+.imageModalDiv {
+    overflow-x: scroll;    
+    -webkit-overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+}
+
+.imageModal .ant-modal-body {
+    padding: 0;
+}
+
+.imageModal img {
+    min-width: 800px;
+    max-width: 100%;
+    /* height: auto; */
+    cursor: pointer;
+    overflow-x: scroll;    
+    -webkit-overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+}
+
+
+/*
+=======================================================
+                   HOW IT WORKS PAGE
+=======================================================
+*/
+
+.hiw {
+    display: flex;
+    justify-content: center;
+    padding-top: 36px;
+    color: #555759;
+}
+
+.hiw h2 {
+    display: inline-block;
+    color: #555759;
+    border-bottom: 2px solid #6f7073;
+}
+
+.hiwBody {
+    width: 600px;
+    font-size: 15px;
+    line-height: 28px;
+    margin: 0 20px;
+    overflow: hidden;
+}
+
+.hiwBody p a {
+    color: #555759;
+    border-bottom: 1px solid rgba(0,0,0,0.40);
+}
+
+.hiwBody p a:hover {
+    color: #181a1c;
+    border-bottom: 1px solid rgba(0,0,0,0.70);
+}
+
+.hiwCode {
+    width: 100%;
+    overflow-y: auto;
+    white-space: nowrap;
+}
+
+.hiwPreCode {
+    padding: 15px;
+    background-color: #f5f5f5;
+}
+/*
+=======================================================
+                    FEEDBACK MODAL
+=======================================================
+*/
+
+.feedbackModal {
+    font-size: 15px;
+    line-height: 28px;
+}
+
+.feedbackModalLabel {
+    padding: 6px 0;
+}
+
+.feedbackModalNameInput {
+    width: 200px;
+}
+
+/* the how it works link */
+.feedbackModal p a{
+    /* default */
+    color:rgba(0, 0, 0, 0.65);
+    transition: color 0s;
+    border-bottom: 1px solid rgba(0,0,0,0.30);
+}
+
+.feedbackModal p a:hover{
+    /* default */
+    color:rgba(0, 0, 0, 0.90);
+    border-bottom-color: rgba(0, 0, 0, 0.60);
+}
+
+
+
+/*
+=======================================================
+                        FOOTER
+=======================================================
+*/
+
+.footer {
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #343740;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerBody {
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer a {
+    transition: none;
+}
+
+.footer a:link, .footer a:visited{
+    color:#FFF;
+}
+.footer a:hover, .footer a:active{
+    color: #c0c0c0;
+}
+
+.footerLinks {
+    padding: 18px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.footerLinks a {
+    padding: 10px 15px;
+    color: #fff;
+}
+
+.footerSocials {
+    padding: 25px 0 0 0;
+}
+
+.footerSocials a {
+    padding: 10px 15px;
+}
+
+.footerEmail {
+    color: #fff;
+    padding: 10px 15px;
+}
+
+.footerEmail:hover {
+    cursor: pointer;
+    color: #c0c0c0;
+}
+
+.footerEmailText {
+    padding: 25px 0 0 0;
+    color: #fff;
+    text-align: center;
+}
+
+.footerCopyright {
+    padding: 25px 0 0 0;
+    color: #a0a0a0;
+}
+
+@media screen and (max-width: 600px) { 
+    .footerLinks {
+        flex-direction: column;
+    }
+}
+
+
+
+/* alt meal card shadow */
+/* more shadow, same hover */
+/* .cardShadow1 {
+    box-shadow:0 7px 14px 0 rgba(50, 50, 93, .1), 0 3px 6px 0 rgba(0, 0, 0, .07);
+    transition-property: color, background-color, box-shadow, transform;
+    transition-duration: .15s;
+}
+.cardShadow1:hover{
+    transform:translateY(-2px);
+    cursor: pointer;
+}
+.cardShadow1:active, .cardShadow1:hover{
+    box-shadow:0 15px 30px -6px rgba(50, 50, 93, .25), 0 9px 18px -9px rgba(0, 0, 0, .3), 0 -6px 18px -4px rgba(0, 0, 0, .025)
+}
+.cardShadow1:active {
+    transform:translateY(2px)
+} */
