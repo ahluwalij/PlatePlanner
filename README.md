@@ -1,6 +1,5 @@
-# <img width="607" alt="Screen Shot 2023-04-20 at 10 25 13 PM" src="https://user-images.githubusercontent.com/65431368/233525947-640ae5c2-0a2d-49b5-9613-67eaaa80a0e3.png">
+# <img width="216" alt="Screenshot 2023-05-29 at 6 13 57 PM" src="https://github.com/ahluwalij/plateplan-meal-generator/assets/65431368/a1168e28-d79b-4252-b675-a706cf19fd6d">
 
-<br />
 
 <div>
   <img src="https://img.shields.io/badge/react-18.2.0-red" />
