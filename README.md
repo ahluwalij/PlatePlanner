@@ -1,4 +1,4 @@
-# <img width="600" alt="Screenshot 2023-05-29 at 6 13 57 PM" src="https://github.com/ahluwalij/plateplan-meal-generator/assets/65431368/a1168e28-d79b-4252-b675-a706cf19fd6d">
+# <img width="720" alt="Plate Plan Banner" src="https://github.com/ahluwalij/plateplan-meal-generator/assets/65431368/857959f1-327d-4f88-a543-db38deade358">
 
 
 <div>
