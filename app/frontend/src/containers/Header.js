@@ -62,7 +62,7 @@ function Header(props) {
                         <Link to='/'>
                             <button className='logoText' style={{ height: '50px', width: '180px' }}
                                 onClick={() => { }}>
-                                PlatePlan.io
+                                PlatePlan
                         </button>
                         </Link>
                     </div>

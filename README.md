@@ -38,12 +38,12 @@ Website to generate personalized meal plans based on the user's food preferences
 ## Built with
 - [React](https://reactjs.org)
 - [Redux](https://redux.js.org)
-- [Ant Design](https://ant.design)
+- [DJango](https://www.djangoproject.com/)
 - [MySQL](https://www.mysql.com/)
 - [Spoonacular API](https://spoonacular.com)
 - [Vercel](https://vercel.com/home)
 
 ## Additional info
-To learn more about the food algorithm and how I generate the meals, check out the [how it works](https://www.PlatePlan.io/howitworks) page.
+To learn more about the food algorithm and how I generate the meals, check out the [how it works](https://www.plateplan.xyz/howitworks) page.
 <br />
-To learn more about me and inspiration behind this project, check out the [about](https://www.PlatePlan.io/about) page.
+To learn more about me and inspiration behind this project, check out the [about](https://www.plateolan.xyz/about) page.

@@ -17,7 +17,7 @@ function About(props) {
                     </h2>
                     <div className='space8' />
                     <p>
-                        Hey! My name is Jasdeep, and I built PlatePlan.io.
+                        Hey! My name is Jasdeep, and I built PlatePlan.
                     </p>
                     <p>
                         I'm currently a rising junior at the University of Maryland studying computer science.
