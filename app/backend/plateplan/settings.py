@@ -152,7 +152,7 @@ USE_TZ = True
 STATIC_URL = '/staticfiles/'
 
 STATICFILES_DIRS = [
-    os.path.join("backend", "static"),
+    os.path.join("backend", "staticfiles"),
 ]
 DEBUG = True
 
