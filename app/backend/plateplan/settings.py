@@ -150,7 +150,7 @@ USE_TZ = True
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-STATIC_URL = '/static/'
+STATIC_URL = '/staticfiles/'
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
