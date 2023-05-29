@@ -37,7 +37,7 @@ Website to generate personalized meal plans based on the user's food preferences
 ## Built with
 - [React](https://reactjs.org)
 - [Redux](https://redux.js.org)
-- [DJango](https://www.djangoproject.com/)
+- [Django](https://www.djangoproject.com/)
 - [MySQL](https://www.mysql.com/)
 - [Spoonacular API](https://spoonacular.com)
 - [Vercel](https://vercel.com/home)
