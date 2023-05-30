@@ -18,7 +18,7 @@ function InfoPanel(props) {
                         style={{ width: 48, height: 48, marginBottom: '13px' }} />
                     <h3 className='infoSquareTitle'>Remove your anxiety</h3>
                     <p className='infoSquareText'>
-                        Plate Plan will generate all your meals ahead of time.
+                        Plate Planner will generate all your meals ahead of time.
                         That way, you don’t have to worry about what you’re doing to eat for the next meal.
                 </p>
                 </div>
@@ -29,7 +29,7 @@ function InfoPanel(props) {
                     <p className='infoSquareText'>
                         You can customize your preferences to fit your needs.
                         Whether you liking snacking throughout the day,
-                        or need to hit your daily protein requirement, Plate Plan has you covered.
+                        or need to hit your daily protein requirement, Plate Planner has you covered.
                 </p>
                 </div>
                 <div className='infoSquare'>
@@ -37,7 +37,7 @@ function InfoPanel(props) {
                         style={{ width: 41, height: 41, marginBottom: '20px' }} />
                     <h3 className='infoSquareTitle'>Save your favorite meals</h3>
                     <p className='infoSquareText'>
-                        See a meal that peaks your interest?  Use your Plate Plan account to save it for later,
+                        See a meal that peaks your interest?  Use your Plate Planner account to save it for later,
                         or pin it in place to keep it in your future meal plans.
                 </p>
                 </div>

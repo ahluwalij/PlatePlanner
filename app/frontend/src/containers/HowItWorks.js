@@ -25,7 +25,7 @@ function HowItWorks(props) {
                         This was crucial to keeping all the components' data up to date as meals are refreshed.
                     </p>
                     <p>
-                        Plate Plan also uses <a href='https://www.djangoproject.com/'>Django</a> for the backend, mainly for user authentication and
+                        Plate Planner also uses <a href='https://www.djangoproject.com/'>Django</a> for the backend, mainly for user authentication and
                         the storage of users' saved meals. In addition, the site uses <a href='https://ant.design/'>Ant Design</a> for various components,
                         and <a href='https://www.chartjs.org/'>ChartJS</a> for the pie charts.
                     </p>
@@ -65,7 +65,7 @@ function HowItWorks(props) {
                         is say, 1200 calories.
                     </p>
                     <p>
-                        Behind the scenes, Plate Plan caches meals to minimize the amount of API calls it does to Spoonacular.  For every meal generated,
+                        Behind the scenes, Plate Planner caches meals to minimize the amount of API calls it does to Spoonacular.  For every meal generated,
                         an extra five is generated during the same API call.  This results in refreshing meals usually being instantaneous.  The
                         orchestration of trying to maximize the use cached meals during regeneration, while fetching meals and keeping certain meals pinned, was
                         the most difficult part of this project.

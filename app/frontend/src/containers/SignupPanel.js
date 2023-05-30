@@ -18,7 +18,7 @@ function SignupPanel(props) {
                         {/* It tasts better when it's effortless. */}
                         {/* It does everything but make the sandwich. */}
                     </div>
-                    Join Plate Plan today.
+                    Join Plate Planner today.
                 </div>
                 <div className='signupPanelFillerM' />
                 <div className='signupPanelInput'>

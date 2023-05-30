@@ -17,7 +17,7 @@ function About(props) {
                     </h2>
                     <div className='space8' />
                     <p>
-                        Hey! My name is Jasdeep, and I built plateplanner.
+                        Hey! My name is Jasdeep, and I built PlatePlanner.
                     </p>
                     <p>
                         I'm currently a rising junior at the University of Maryland studying computer science.
@@ -37,7 +37,7 @@ function About(props) {
                         way to hit my "macro" goals in less of a soul-crushing meal than chicken and rice...
                     </p>
                     <p>
-                        That problem spawned the idea of Plate Plan.  I wanted to create a meal plan generator that, given calorie and
+                        That problem spawned the idea of Plate Planner.  I wanted to create a meal plan generator that, given calorie and
                         macronutrient information, would spit back out randomly generated meal plans (think of it like a reverse MyFittnessPal).  I had to
                         source this food data from somewhere.  I starting by using the <a href='https://fdc.nal.usda.gov/'>USDA food database</a> which
                         houses the hundreds the of thousands of foods that are on every nutrition label. The biggest difficulty I had with this database

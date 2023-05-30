@@ -40,7 +40,7 @@ function Footer(props) {
                     <div style={{ display: 'flex' }}>
                         <img src={whiteLogo} alt="logo" style={{ width: 32, height: 32, margin: '-5px 0 0 0' }} draggable='false' />
                         <span className='logoText' style={{ color: '#fff', padding: '0 0 0 8px' }}>
-                            plateplanner
+                            PlatePlanner
                     </span>
                     </div>
 
