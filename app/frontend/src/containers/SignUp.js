@@ -101,7 +101,7 @@ const SignUp = (props) => {
                         </Link>
                         <Link to='/'>
                             <span className='logoText' style={{ padding: '0 0 0 8px' }}>
-                                PlatePlan
+                                plateplanner
                         </span>
                         </Link>
                     </div>

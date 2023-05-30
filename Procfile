@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath app/backend plateplan.wsgi
+web: gunicorn --pythonpath app/backend plateplanner.wsgi

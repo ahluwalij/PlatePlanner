@@ -18,7 +18,7 @@ let history = createBrowserHistory();
 // if testing
 // axios.defaults.baseURL = "http://127.0.0.1:8000";
 // if deployed
-axios.defaults.baseURL = 'https://plateplan-backend.herokuapp.com/';
+axios.defaults.baseURL = 'https://plateplanner-backend.herokuapp.com/';
 
 class App extends Component {
   componentDidMount() {

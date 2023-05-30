@@ -71,7 +71,7 @@ function HowItWorks(props) {
                         the most difficult part of this project.
                     </p>
                     <p>
-                        Check out the actual implementation over at <a href='https://github.com/ahluwalij/plateplan-meal-generator'>my Github</a>.
+                        Check out the actual implementation over at <a href='https://github.com/ahluwalij/plateplanner-meal-generator'>my Github</a>.
                     </p>
                     <div className='space8' />
                     <h2>

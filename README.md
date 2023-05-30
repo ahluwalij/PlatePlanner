@@ -1,4 +1,4 @@
-# <img width="720" alt="Plate Plan Banner" src="https://github.com/ahluwalij/plateplan-meal-generator/assets/65431368/857959f1-327d-4f88-a543-db38deade358">
+# <img width="720" alt="Plate Plan Banner" src="https://github.com/ahluwalij/plateplanner-meal-generator/assets/65431368/857959f1-327d-4f88-a543-db38deade358">
 
 
 <div>
@@ -43,6 +43,6 @@ Website to generate personalized meal plans based on the user's food preferences
 - [Vercel](https://vercel.com/home)
 
 ## Additional info
-To learn more about the food algorithm and how I generate the meals, check out the [how it works](https://www.plateplan.xyz/howitworks) page.
+To learn more about the food algorithm and how I generate the meals, check out the [how it works](https://www.plateplanner.xyz/howitworks) page.
 <br />
-To learn more about me and inspiration behind this project, check out the [about](https://www.plateolan.xyz/about) page.
+To learn more about me and inspiration behind this project, check out the [about](https://www.plateplanner.xyz/about) page.
