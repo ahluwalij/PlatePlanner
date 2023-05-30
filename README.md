@@ -1,4 +1,4 @@
-# <img width="720" alt="Plate Planner Banner" src="https://github.com/ahluwalij/plateplanner-meal-generator/assets/65431368/857959f1-327d-4f88-a543-db38deade358">
+# <img width="720" alt="PlatePlanner Banner" src="https://github.com/ahluwalij/plateplanner-meal-generator/assets/65431368/e436f61f-eb28-40c7-97d4-c76cf2c3b7b6">
 
 
 <div>
