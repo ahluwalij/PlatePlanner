@@ -1,9 +1,7 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
-
-const ImageModal = lazy(() => import("../components/ImageModal"));
 
 function About(props) {
   return (
