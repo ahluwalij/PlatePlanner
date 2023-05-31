@@ -1,96 +1,98 @@
-import React, { lazy, Suspense } from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import { Link } from 'react-router-dom';
+import React, { lazy, Suspense } from "react";
+import Header from "./Header";
+import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
-const ImageModal = lazy(() => import('../components/ImageModal'));
+const ImageModal = lazy(() => import("../components/ImageModal"));
 
 function About(props) {
-
-    return (
-        <>
-            <Header {...props} />
-            <div className='about'>
-                <div className='aboutBody'>
-                    <h2>
-                        About
-                    </h2>
-                    <div className='space8' />
-                    <p>
-                        Hey! My name is Jasdeep, and I built PlatePlanner.
-                    </p>
-                    <p>
-                        I'm currently a rising junior at the University of Maryland studying computer science.
-                    </p>
-                    <div className='space8' />
-                    <h2>
-                        Inspiration
-                    </h2>
-                    <div className='space8' />
-                    <p>
-                        The idea of creating a website started at the end of 2022.  Web development is one of the areas of
-                        computer science that UMD doesn't focus on, so naturally I was very curious about the subject.
-                        I figured the best way to learn about it was to jump right in.  But first, I needed an idea.  I wanted to make a site
-                        that would not only solve a problem, but be interesting to me.  One of my biggiest hobbies is lifting, so naturally
-                        I thought of different ideas based around that. The problem I wanted to solve hit me; all I eat is
-                        chicken and rice. Like multiple meals of it every day, and trust me, I was sick of it.  Surely, there must be a better
-                        way to hit my "macro" goals in less of a soul-crushing meal than chicken and rice...
-                    </p>
-                    <p>
-                        That problem spawned the idea of Plate Planner.  I wanted to create a meal plan generator that, given calorie and
-                        macronutrient information, would spit back out randomly generated meal plans (think of it like a reverse MyFittnessPal).  I had to
-                        source this food data from somewhere.  I starting by using the <a href='https://fdc.nal.usda.gov/'>USDA food database</a> which
-                        houses the hundreds the of thousands of foods that are on every nutrition label. The biggest difficulty I had with this database
-                        was figuring out how to match foods together.  How would I know that chicken breast goes well with potatoes, and not, say, grape jelly? This is what
-                        led me to using the <a href='https://spoonacular.com/food-api'>Spoonacular API</a>, which was a database full of <b>recipes</b>.
-                        I dive into the detail on how I generate these foods in my <Link to='/howitworks'>How it works</Link> page.
-                    </p>
-                    <div className='space8' />
-                    <h2>
-                        Development
-                    </h2>
-                    <div className='space8' />
-                    <p>
-                        Once I had my idea down, as well as the technologies I was going to use, I hit the ground running.  In fact, when I first started
-                        building this site, I didn't know any HTML, CSS, or even Javascript!  But hey, the best way to learn it to jump right in.  And I learned a lot.
-                        Over the course of a few months, I became obsessed with this project.  I would work on it whenever I got the chance, and it
-                        would constantly be in the back of my mind.  I loved it, and completely fell in love with web developement (as well as design/UI).
-                        The end product turned out better than I ever could have imagined.
-                        <br />
-                    </p>
-                    <div className='space8' />
-                    <h2>
-                        Original Designs
-                    </h2>
-                    <div className='space16' />
-                    <div className='aboutImgBody'>
-                        <Suspense fallback={<div>Loading...</div>}>
-                            <ImageModal number={1} />
-                            <ImageModal number={2} />
-                        </Suspense>
-                    </div>
-                    <div className='space32' />
-                    <h2>
-                        Closing
-                    </h2>
-                    <div className='space8' />
-                    <p>
-                        Thanks for checking out my site.  If there's something you particularly enjoyed, or noticed an aspect I could
-                        have improved, hit the feedback button at the bottom of the page.  Whether this site gives you some meal ideas, inspires
-                        you to build a website, or even entertained you for a minute, I'm glad you stopped by.
-                    </p>
-                    <p>
-                        Best,
-                        <br />
-                        Jasdeep
-                    </p>
-                </div>
-            </div>
-            <div style={{ height: '100px' }} />
-            <Footer />
-        </>
-    )
+  return (
+    <>
+      <Header {...props} />
+      <div className="about">
+        <div className="aboutBody">
+          <h2>About</h2>
+          <div className="space8" />
+          <p>
+            Hey there! My name is Jasdeep, and I am the creator of PlatePlanner.
+          </p>
+          <p>
+            I'm currently a Computer Science & Statistics student at the University of
+            Maryland, graduating December 2024.
+          </p>
+          <div className="space8" />
+          <h2>Inspiration</h2>
+          <div className="space8" />
+          <p>
+            The idea for creating Plate Planner emerged towards the end of 2022,
+            driven by my passion for fitness and the desire to make a meaningful
+            impact. As a computer science student at the University of Maryland,
+            I recognized that web development wasn't extensively covered in my
+            coursework. Intrigued by the subject, and fueled by my passion of
+            web development, I saw an opportunity to delve into this domain
+            while simultaneously crafting a tool that could assist others in
+            their health and nutrition journeys. It was a chance for me to
+            explore new technologies and expand my skill set.
+          </p>
+          <p>
+            It was during this time that the idea for Plate Planner was born.
+            Tired of eating the same chicken and rice meals every day, I wanted
+            to find a better way to meet my nutritional goals without
+            sacrificing taste. That's when the concept of a meal plan generator
+            struck me. I envisioned a website that could generate randomized
+            meal plans based on calorie and macronutrient information, providing
+            users with a variety of delicious and balanced options. To bring
+            this idea to life, I needed access to a reliable food database.
+            Initially, I explored the USDA food database, which contains an
+            extensive collection of food items found on nutrition labels.
+            However, I encountered challenges in matching foods together to
+            create cohesive meals. This led me to discover the Spoonacular API,
+            a database packed with an abundance of recipes. The integration of
+            this API allowed me to generate diverse and flavorful meal options.
+            For a more detailed explanation of how Plate Planner works, you can
+            visit the <Link to="/howitworks">how it works</Link> page.
+          </p>
+          <div className="space8" />
+          <h2>Development</h2>
+          <div className="space8" />
+          <p>
+            The development process of Plate Planner was an exhilarating journey
+            where I had the opportunity to showcase my passion for web
+            development. With my background in building websites and a strong
+            foundation in computer science, I approached the project with
+            determination and enthusiasm. One of the key aspects of the
+            development was the utilization of relational databases,
+            specifically MySQL, to efficiently store and retrieve the vast
+            amount of data required for the account & user preference database.
+            This involved thorough research and planning to architect the
+            backend of the application and ensure seamless interactions between
+            the frontend and backend systems. It is an area that I really
+            attempted to fully understand and master, and I am proud of the
+            result.
+          </p>
+          <div className="space8" />
+          <h2>Closing</h2>
+          <div className="space8" />
+          <p>
+            Thank you for visiting my website. I hope you found value in
+            exploring PlatePlanner. If you have any feedback, whether it's
+            something you enjoyed or suggestions for improvement, please feel
+            free to reach out through the feedback button at the bottom of the
+            page. My aim is to inspire you with new meal ideas, ignite your
+            passion for web development, or simply provide a moment of
+            entertainment. Your support means a lot to me.
+          </p>
+          <p>
+            Best regards,
+            <br />
+            Jasdeep
+          </p>
+        </div>
+      </div>
+      <div style={{ height: "100px" }} />
+      <Footer />
+    </>
+  );
 }
-
 
 export default About;
