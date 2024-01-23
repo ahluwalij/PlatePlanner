@@ -16,7 +16,7 @@ function About(props) {
           </p>
           <p>
             I'm currently a Computer Science & Statistics student at the University of
-            Maryland, graduating December 2024.
+            Maryland, graduating May 2025.
           </p>
           <div className="space8" />
           <h2>Inspiration</h2>
