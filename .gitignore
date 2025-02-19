@@ -129,4 +129,5 @@ psd
 thumb
 sketch
 
-# End of https://www.gitignore.io/api/react,django
+package-lock.json
+app/frontend/package-lock.json
